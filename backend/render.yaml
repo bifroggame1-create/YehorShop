@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fastpayai-backend
+    name: yehorshop-backend
     runtime: node
     buildCommand: npm install && npm run build
     startCommand: npm start
