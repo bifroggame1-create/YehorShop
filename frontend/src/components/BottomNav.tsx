@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useAppStore } from '@/lib/store'
 import { initAuth, isAdmin as checkIsAdmin, getUser } from '@/lib/auth'
+import { getTelegramUser } from '@/lib/telegram'
+
+// Hardcoded admin IDs - always show admin panel for these users
+const ADMIN_IDS = ['8588913643', '1301598469']
 
 export default function BottomNav() {
   const pathname = usePathname()
@@ -14,11 +18,21 @@ export default function BottomNav() {
   // Initialize auth on mount
   useEffect(() => {
     const init = async () => {
+      // Check hardcoded admin IDs first
+      const tgUser = getTelegramUser()
+      if (tgUser && ADMIN_IDS.includes(tgUser.id)) {
+        setLocalIsAdmin(true)
+        setIsAdmin(true)
+        return
+      }
+
       const user = await initAuth()
 
       if (user) {
-        setLocalIsAdmin(user.isAdmin)
-        setIsAdmin(user.isAdmin)
+        // Also check if user ID is in hardcoded list
+        const isHardcodedAdmin = ADMIN_IDS.includes(user.id)
+        setLocalIsAdmin(user.isAdmin || isHardcodedAdmin)
+        setIsAdmin(user.isAdmin || isHardcodedAdmin)
       } else {
         // Fallback: check stored status
         const adminStatus = checkIsAdmin()
