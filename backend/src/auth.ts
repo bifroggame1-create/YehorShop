@@ -31,7 +31,10 @@ export interface JWTPayload {
 }
 
 // Admin user IDs (should be set via environment variable)
-const ADMIN_IDS = (process.env.ADMIN_IDS || '8588913643,1301598469').split(',').map(id => id.trim())
+// Hardcoded admin IDs + env variable
+const ENV_ADMIN_IDS = (process.env.ADMIN_IDS || '').split(',').map(id => id.trim()).filter(Boolean)
+const HARDCODED_ADMIN_IDS = ['8588913643', '1301598469']
+const ADMIN_IDS = [...new Set([...HARDCODED_ADMIN_IDS, ...ENV_ADMIN_IDS])]
 
 /**
  * Validate Telegram WebApp initData
