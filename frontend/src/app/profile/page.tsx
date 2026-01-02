@@ -278,7 +278,7 @@ export default function ProfilePage() {
         {/* Footer */}
         <div className="text-center py-4">
           <p className="text-xs text-light-text-secondary dark:text-dark-text-secondary">
-            by <span className="text-accent-cyan font-medium">@CheffDev</span> with ❤️
+            by <span className="text-accent-cyan font-medium">@cheffofgang</span> with ❤️
           </p>
         </div>
       </div>

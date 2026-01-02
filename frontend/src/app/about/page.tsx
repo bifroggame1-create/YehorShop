@@ -31,10 +31,10 @@ const content = {
       items: [
         { icon: '💬', label: 'Поддержка', value: '@teddyxsup' },
         { icon: '📢', label: 'Новости', value: '@Yehor ShopNews' },
-        { icon: '👨‍💻', label: 'Разработчик', value: '@CheffDev' }
+        { icon: '👨‍💻', label: 'Разработчик', value: '@cheffofgang' }
       ]
     },
-    footer: 'Made with ❤️ by CheffDev'
+    footer: 'Made with ❤️ by cheffofgang'
   },
   en: {
     title: 'About Yehor Shop',
@@ -61,10 +61,10 @@ const content = {
       items: [
         { icon: '💬', label: 'Support', value: '@teddyxsup' },
         { icon: '📢', label: 'News', value: '@Yehor ShopNews' },
-        { icon: '👨‍💻', label: 'Developer', value: '@CheffDev' }
+        { icon: '👨‍💻', label: 'Developer', value: '@cheffofgang' }
       ]
     },
-    footer: 'Made with ❤️ by CheffDev'
+    footer: 'Made with ❤️ by cheffofgang'
   }
 }
 
