@@ -196,7 +196,7 @@ export async function adminMiddleware(
   }
 
   // Check if user is admin (from JWT payload or ADMIN_IDS env var)
-  const isUserAdmin = payload.isAdmin || ADMIN_IDS.includes(payload.userId)
+  const isUserAdmin = payload.isAdmin || ADMIN_IDS.includes(String(payload.userId))
 
   if (!isUserAdmin) {
     console.log('🔐 Admin access DENIED - not an admin:', payload.userId)
