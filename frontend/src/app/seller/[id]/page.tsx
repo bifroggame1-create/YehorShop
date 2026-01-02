@@ -56,11 +56,6 @@ export default function SellerProfilePage() {
             stats: {
               totalOrders: sellerProducts.length * 10,
               successfulOrders: sellerProducts.length * 10,
-              refundsCount: 0,
-              disputesCount: 0,
-              disputesLost: 0,
-              replacementsCount: 0,
-              totalRevenue: 0,
             }
           })
         } else {
