@@ -42,9 +42,9 @@ export default function Header({ title, logo, showBack, onBack, rightAction, sho
             </button>
           ) : (
             <img
-              src="/logofast.png"
+              src="/Yehor.png"
               alt="Yehor Shop"
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto object-contain rounded-lg"
             />
           )}
         </div>
