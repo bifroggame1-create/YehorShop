@@ -11,7 +11,7 @@ const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://yehorshop.onrender.
 // ============================================
 
 // Default tenant ID from environment
-const DEFAULT_TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || 'fastpay'
+const DEFAULT_TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || 'yehorshop'
 
 // Store tenant ID in memory (can be overridden by URL param or storage)
 let currentTenantId: string | null = null

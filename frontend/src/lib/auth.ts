@@ -4,7 +4,7 @@
  */
 
 const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://yehorshop.onrender.com').replace(/\/+$/, '')
-const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || 'fastpay'
+const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || 'yehorshop'
 
 // Debug logging (disabled in production)
 const DEBUG = process.env.NODE_ENV === 'development'
